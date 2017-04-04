@@ -89,3 +89,5 @@ nodes = sel(html)
 for node in nodes:
     print node.text
     print "----------"
+    
+    

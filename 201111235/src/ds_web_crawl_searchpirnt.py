@@ -28,3 +28,4 @@ f.close()
 import webbrowser
 mygoogle='file://'+'localhost'+os.path.join(os.getcwd(), 'mygoogle2.html')
 print mygoogle
+
