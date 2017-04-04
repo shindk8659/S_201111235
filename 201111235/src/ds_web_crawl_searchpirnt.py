@@ -7,7 +7,7 @@ html=resp.read()
 len(html)
 
 import os
-f=open(os.path.join('src','mygoogle1.html'),'w')
+f=open(os.path.join('mygoogle1.html'),'w')
 f.write(html)
 f.close()
 
@@ -22,9 +22,9 @@ page = myopener.open('http://www.google.com/search?q='+keyword)
 html=page.read()
 
 import os
-f=open(os.path.join('src','mygoogle2.html'),'w')
+f=open(os.path.join('mygoogle2.html'),'w')
 f.write(html)
 f.close()
 import webbrowser
-mygoogle='file://'+'localhost'+os.path.join(os.getcwd(), 'src','mygoogle2.html')
+mygoogle='file://'+'localhost'+os.path.join(os.getcwd(), 'mygoogle2.html')
 print mygoogle
