@@ -1,6 +1,8 @@
 
-from urllib import urlopen
 #coding:utf-8
+
+from urllib import urlopen
+
 keyword='sangmyung univ'
 resp = urlopen('https://www.google.com/search?q='+keyword)
 html=resp.read()
@@ -28,4 +30,3 @@ f.close()
 import webbrowser
 mygoogle='file://'+'localhost'+os.path.join(os.getcwd(), 'mygoogle2.html')
 print mygoogle
-
