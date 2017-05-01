@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # coding: utf-8
 import os
 import requests
@@ -26,5 +27,4 @@ def doIt():
     data=requests.get(url).text
     print data[:300]
 
-if __name__ == "__main__":
-    doIt()
+if __name__ == "x
