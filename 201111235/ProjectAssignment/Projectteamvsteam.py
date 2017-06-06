@@ -292,8 +292,17 @@ for a in range(0,2):
         oddsum=0
 
 
-
-
-
-
 print team[0],("vs"),team[1],(":"),vsodd[0],"%",("vs"),vsodd[1],("%"),("\n")
+
+def barchart(data,labels):
+    num_bars = len(data)
+    positions = range(1, num_bars + 1)
+    plt.barh(positions, data, align='center')
+    plt.yticks(positions, labels)
+    plt.xlabel('Win Odd')
+    plt.ylabel('Team')
+    plt.title('Team odds average')
+    plt.grid()
+    plt.show()
+
+barchart(vsodd,team)
