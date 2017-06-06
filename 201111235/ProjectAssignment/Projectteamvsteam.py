@@ -26,7 +26,7 @@ for i in range(0,2):
 for a in range(0,2):
     if team[a]=='tottenham':
         cfile= os.path.join(os.path.expanduser("~"),\
-                   "Desktop/bigdata/s_201111235/201111235/bigdata/data/tottenham/playerlist.txt")
+                   "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/tottenham/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
         player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Atrribute=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
@@ -47,7 +47,7 @@ for a in range(0,2):
         odd=0
         print ("-------------------------------------------------------------------")
         print ("They are currently playing at EPL.")
-        print ("PlayerNumber, PlayerName, Goal, Number of Wins, Number of Losses.")
+        print ("PlayerNumber, PlayerName, Goal(CleanSheet), Number of Wins, Number of Losses.")
         for i in range(0,23):
             print np.array(_numberRdd)[i],np.array(_nameRdd)[i],np.array(_goalRdd)[i],np.array(_winRdd)[i],np.array(_loseRdd)[i]
         print ("-------------------------------------------------------------------")
@@ -93,7 +93,7 @@ for a in range(0,2):
 
     elif team[a]=='arsenal':
         cfile= os.path.join(os.path.expanduser("~"),\
-                   "Desktop/bigdata/s_201111235/201111235/bigdata/data/arsenal/playerlist.txt")
+                   "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/arsenal/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
         player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Atrribute=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
@@ -114,7 +114,7 @@ for a in range(0,2):
         odd=0
         print ("-------------------------------------------------------------------")
         print ("They are currently playing at EPL.")
-        print ("PlayerNumber, PlayerName, Goal, Number of Wins, Number of Losses.")
+        print ("PlayerNumber, PlayerName, Goal(CleanSheet), Number of Wins, Number of Losses.")
         for i in range(0,25):
             print np.array(_numberRdd)[i],np.array(_nameRdd)[i],np.array(_goalRdd)[i],np.array(_winRdd)[i],np.array(_loseRdd)[i]
         print ("-------------------------------------------------------------------")
@@ -159,7 +159,7 @@ for a in range(0,2):
         oddsum=0
     elif team[a]=='manchestercity':
         cfile= os.path.join(os.path.expanduser("~"),\
-                   "Desktop/bigdata/s_201111235/201111235/bigdata/data/manchestercity/playerlist.txt")
+                   "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/manchestercity/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
         player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Atrribute=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
@@ -180,7 +180,7 @@ for a in range(0,2):
         odd=0
         print ("-------------------------------------------------------------------")
         print ("They are currently playing at EPL.")
-        print ("PlayerNumber, PlayerName, Goal, Number of Wins, Number of Losses.")
+        print ("PlayerNumber, PlayerName, Goal(CleanSheet), Number of Wins, Number of Losses.")
         for i in range(0,22):
             print np.array(_numberRdd)[i],np.array(_nameRdd)[i],np.array(_goalRdd)[i],np.array(_winRdd)[i],np.array(_loseRdd)[i]
         print ("-------------------------------------------------------------------")
@@ -226,7 +226,7 @@ for a in range(0,2):
 
     elif team[a]=='chelsea':
         cfile= os.path.join(os.path.expanduser("~"),\
-                   "Desktop/bigdata/s_201111235/201111235/bigdata/data/chelsea/playerlist.txt")
+                   "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/chelsea/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
         player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Atrribute=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
@@ -247,7 +247,7 @@ for a in range(0,2):
         odd=0
         print ("-------------------------------------------------------------------")
         print ("They are currently playing at EPL.")
-        print ("PlayerNumber, PlayerName, Goal, Number of Wins, Number of Losses.")
+        print ("PlayerNumber, PlayerName, Goal(CleanSheet), Number of Wins, Number of Losses.")
         for i in range(0,20):
             print np.array(_numberRdd)[i],np.array(_nameRdd)[i],np.array(_goalRdd)[i],np.array(_winRdd)[i],np.array(_loseRdd)[i]
         print ("-------------------------------------------------------------------")
