@@ -29,11 +29,11 @@ for a in range(0,2):
                    "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/tottenham/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
-        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
+        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
 
         tDf = spark.createDataFrame(player)
 
-        _appearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
+        _AppearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
         _goalRdd=tDf.rdd.map(lambda fields:fields[1]).collect()
         _loseRdd=tDf.rdd.map(lambda fields:fields[2]).collect()
         _nameRdd=tDf.rdd.map(lambda fields:fields[3]).collect()
@@ -96,11 +96,11 @@ for a in range(0,2):
                    "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/arsenal/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
-        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
+        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
 
         tDf = spark.createDataFrame(player)
 
-        _appearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
+        _AppearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
         _goalRdd=tDf.rdd.map(lambda fields:fields[1]).collect()
         _loseRdd=tDf.rdd.map(lambda fields:fields[2]).collect()
         _nameRdd=tDf.rdd.map(lambda fields:fields[3]).collect()
@@ -162,11 +162,11 @@ for a in range(0,2):
                    "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/manchestercity/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
-        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
+        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
 
         tDf = spark.createDataFrame(player)
 
-        _appearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
+        _AppearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
         _goalRdd=tDf.rdd.map(lambda fields:fields[1]).collect()
         _loseRdd=tDf.rdd.map(lambda fields:fields[2]).collect()
         _nameRdd=tDf.rdd.map(lambda fields:fields[3]).collect()
@@ -229,11 +229,11 @@ for a in range(0,2):
                    "Desktop/sbigdata/s_201111235/201111235/ProjectAssignment/data/chelsea/playerlist.txt")
         rdd = spark.sparkContext.textFile(cfile)
         parts = rdd.map(lambda x:x.split("\t"))
-        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
+        player = parts.map(lambda p: Row(PlayerNumber=int(p[0].strip()),Name=p[1],Appearance=int(p[2].strip()),Goal=int(p[3].strip()),Win=int(p[4].strip()), Lose=int(p[5].strip()),Play=int(p[6].strip()),Winper=float(p[7].strip())))
 
         tDf = spark.createDataFrame(player)
 
-        _appearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
+        _AppearanceRdd=tDf.rdd.map(lambda fields:fields[0]).collect()
         _goalRdd=tDf.rdd.map(lambda fields:fields[1]).collect()
         _loseRdd=tDf.rdd.map(lambda fields:fields[2]).collect()
         _nameRdd=tDf.rdd.map(lambda fields:fields[3]).collect()
